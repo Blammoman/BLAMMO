@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLAMMO - Your All-in-One Productivity Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">🔥 BLAMMO</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#chatroom" class="nav-link" data-section="chatroom">Chatroom</a></li>
+                <li><a href="#todo" class="nav-link" data-section="todo">To-Do List</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h1 class="hero-title">Welcome to BLAMMO</h1>
+                <p class="hero-subtitle">Your All-in-One Productivity Platform</p>
+                <div class="hero-description">
+                    <p>Experience the perfect combination of real-time communication and task management. Built with modern web technologies for speed and reliability.</p>
+                </div>
+                <div class="cta-buttons">
+                    <button class="cta-btn chatroom-btn" data-section="chatroom">💬 Open Chatroom</button>
+                    <button class="cta-btn todo-btn" data-section="todo">✓ Open To-Do List</button>
+                </div>
+            </div>
+
+            <div class="features">
+                <h2>Why Choose BLAMMO?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h3>Real-Time Chatroom</h3>
+                        <p>Connect and communicate instantly with smooth animations and persistent message history.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✓</div>
+                        <h3>Smart To-Do List</h3>
+                        <p>Manage your tasks efficiently with filters, statistics, and automatic data persistence.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h3>Local Storage</h3>
+                        <p>All your data is saved locally. No account needed, no external servers required.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Fully Responsive</h3>
+                        <p>Works perfectly on desktop, tablet, and mobile devices. Access from anywhere.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Lightning Fast</h3>
+                        <p>Built with vanilla JavaScript for maximum speed and zero dependencies.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Beautiful Design</h3>
+                        <p>Modern black and orange interface with smooth animations and transitions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatroom Section -->
+        <section id="chatroom" class="section">
+            <div class="section-header">
+                <h2>💬 Chatroom</h2>
+                <p>Real-time messaging with persistent storage</p>
+            </div>
+            <div class="chatroom-container">
+                <div class="messages-container" id="messagesContainer">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="messageInput" placeholder="Type your message..." class="message-input">
+                    <button id="sendBtn" class="send-btn">Send</button>
+                    <button id="clearChatBtn" class="clear-chat-btn">Clear</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- To-Do List Section -->
+        <section id="todo" class="section">
+            <div class="section-header">
+                <h2>✓ To-Do List</h2>
+                <p>Organize your tasks efficiently</p>
+            </div>
+            <div class="todo-container">
+                <div class="todo-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Total</span>
+                        <span class="stat-value" id="totalTasks">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Completed</span>
+                        <span class="stat-value" id="completedTasks">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Remaining</span>
+                        <span class="stat-value" id="remainingTasks">0</span>
+                    </div>
+                </div>
+
+                <div class="todo-input-area">
+                    <input type="text" id="taskInput" placeholder="Add a new task..." class="task-input">
+                    <button id="addTaskBtn" class="add-task-btn">Add Task</button>
+                </div>
+
+                <div class="todo-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+
+                <div class="tasks-container" id="tasksContainer">
+                    <!-- Tasks will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2>About BLAMMO</h2>
+                <p>Learn more about our platform</p>
+            </div>
+            <div class="about-content">
+                <div class="about-card">
+                    <h3>What is BLAMMO?</h3>
+                    <p>BLAMMO is a modern, integrated productivity platform that combines real-time communication with intelligent task management. Built from the ground up with user experience in mind, BLAMMO delivers a seamless, responsive interface that works across all devices.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Technology Stack</h3>
+                    <ul class="tech-list">
+                        <li>✓ HTML5 - Semantic markup</li>
+                        <li>✓ CSS3 - Modern styling with flexbox and gradients</li>
+                        <li>✓ Vanilla JavaScript (ES6+) - No frameworks or dependencies</li>
+                        <li>✓ localStorage API - Persistent data storage</li>
+                    </ul>
+                </div>
+                <div class="about-card">
+                    <h3>Design Philosophy</h3>
+                    <p>BLAMMO embraces bold colors and smooth interactions. The black and orange color scheme creates a modern, energetic aesthetic while maintaining excellent readability and accessibility. Every animation and transition serves a purpose - enhancing user experience without being distracting.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Key Features</h3>
+                    <ul class="features-list">
+                        <li>🔥 Real-time chatroom with bot replies</li>
+                        <li>📊 Advanced to-do list with filtering</li>
+                        <li>💾 Automatic localStorage persistence</li>
+                        <li>📱 Fully responsive design</li>
+                        <li>⚡ Lightning-fast performance</li>
+                        <li>🎨 Beautiful, modern interface</li>
+                    </ul>
+                </div>
+                <div class="about-card">
+                    <h3>Privacy & Security</h3>
+                    <p>All data is stored locally in your browser using localStorage. No information is sent to external servers. Your messages and tasks remain completely private and under your control. You have full visibility and control over your data at all times.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Future Enhancements</h3>
+                    <p>We're constantly improving BLAMMO. Planned features include user authentication, real-time WebSocket communication, message editing, task priorities, due dates, and much more. Stay tuned for exciting updates!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 BLAMMO. Made with ❤️ by Blammoman. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
